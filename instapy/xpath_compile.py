@@ -95,7 +95,7 @@ xpath["get_comments_on_post"] = {
 xpath["get_cord_location"] = {"json_text": "//body"}
 
 xpath["get_following_status"] = {
-    "follow_button_XP": "//button[text()='Following' or \
+    "follow_button_XP": "//button/div[text()='Following' or \
                                   text()='Requested' or \
                                   text()='Follow' or \
                                   text()='Follow Back' or \
@@ -108,12 +108,12 @@ xpath["get_follow_requests"] = {
     "view_more_button": "//button[text()='View More']",
 }
 
-xpath["get_given_user_followers"] = {"followers_link": "//ul/li[2]/a/span"}
+xpath["get_given_user_followers"] = {"followers_link": "//ul/li[2]/a/div/span"}
 
 xpath["get_given_user_following"] = {
-    "all_following": "//a[contains(@href,'following')]/span",
+    "all_following": "//a[contains(@href,'following')]/div/span",
     "topCount_elements": "//span[contains(@class,'g47SY')]",
-    "following_link": '//a[@href="/{}/following/"]',
+    "following_link": "//a[contains(@href,'following')]/@href",
 }
 
 xpath["get_photo_urls_from_profile"] = {"photos_a_elems": "//div/a"}
